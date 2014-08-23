@@ -2,7 +2,7 @@ require 'plane'
 
 describe Plane do 
 
-	let(:plane) {Plane.new}
+	let(:plane) { Plane.new			}
 
 	it "is grounded when created" do
 		expect(plane.grounded?).to be true

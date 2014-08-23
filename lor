@@ -1,4 +1,9 @@
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[32m.[0m[33m*[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
 
-Finished in 0.00203 seconds (files took 0.09163 seconds to load)
-[32m5 examples, 0 failures[0m
+Pending:
+  [33mAirport traffic control a plane cannot take off when a storm is brewing[0m
+    # [36mTemporarily skipped with xit[0m
+    # [36m./spec/airport_spec.rb:30[0m
+
+Finished in 0.00363 seconds (files took 0.08752 seconds to load)
+[33m8 examples, 0 failures, 1 pending[0m
