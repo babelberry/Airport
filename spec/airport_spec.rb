@@ -1,10 +1,11 @@
 require './lib/airport.rb'
+require './lib/check_weather'
 
 
 describe Airport do
 
-let(:airport)		{ Airport.new 									}
-let(:plane) 		{ double = 'plane'								}
+let(:airport)		{ Airport.new					}
+let(:plane) 		{ double = 'plane'				}
 
 
 	context 'take off and landing' do
@@ -27,9 +28,9 @@ let(:plane) 		{ double = 'plane'								}
 			expect{ airport.dock(plane) }.to raise_error("cannot dock, airport full") 
 		end
 
-		xit 'a plane cannot take off when a storm is brewing' do
-			airport.check_weather until weather == 'sunny'
-			expect{ airport.dock(plane) }.to raise_error("cannot dock, bad_weather") 
+		it 'a plane cannot take off when a storm is brewing' do
+			allow(airport).to receive(:weather).and_return("storm")
+			expect{ airport.dock(plane) }.to raise_error("cannot dock, bad weather") 
 		end
 
 	end

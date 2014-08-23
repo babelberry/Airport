@@ -1,4 +1,8 @@
+require './lib/check_weather'
+
 class Airport
+
+	include Weather
 
 DEFAULT_CAPACITY = 20
 	
@@ -15,9 +19,8 @@ DEFAULT_CAPACITY = 20
 	end
 
 	def dock(plane)
-		if @in_airport.count == capacity
-			raise "cannot dock, airport full"
-		end
+			raise "cannot dock, bad weather" if weather == "storm"
+			raise "cannot dock, airport full" 	if @in_airport.count == capacity
 		@in_airport << plane 
 	end
 
