@@ -1,6 +1,6 @@
 class Plane
 	def initialize
-		@grounded = true
+		@grounded = false
 	end
 
 	def grounded?

@@ -1,15 +1,4 @@
-[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
 
-Failures:
-
-  1) Airport traffic control a plane cannot take off when a storm is brewing
-     [31mFailure/Error: expect{ airport.dock(plane) }.to raise_error("cannot dock, bad weather")[0m
-     [31m  expected Exception with "cannot dock, bad weather" but nothing was raised[0m
-     [36m# ./spec/airport_spec.rb:33:in `block (3 levels) in <top (required)>'[0m
-
-Finished in 0.00829 seconds (files took 0.08473 seconds to load)
-[31m8 examples, 1 failure[0m
-
-Failed examples:
-
-[31mrspec ./spec/airport_spec.rb:31[0m [36m# Airport traffic control a plane cannot take off when a storm is brewing[0m
+Finished in 0.01667 seconds (files took 0.14706 seconds to load)
+[32m8 examples, 0 failures[0m
