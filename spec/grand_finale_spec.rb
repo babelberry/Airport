@@ -14,16 +14,14 @@ let (:plane6)	{ Plane.new}
 
 
 	it 'all planes can land and all planes can take off' do
+  	allow(airport).to receive(:weather).and_return("sunny")
   	airport.capacity=6
   	six_planes = [plane, plane2, plane3, plane4, plane5, plane6]
-  	six_planes.each {|plane| airport.dock(plane)}
+  	until airport.filled_spaces == airport.capacity do 
+  			six_planes.each {|plane| airport.dock(plane)} 
+  			end
   	six_planes.each {|plane| airport.release(plane)}
-  	expect(plane.status?).to eq "flying"
-  	expect(plane2.status?).to eq "flying"
-  	expect(plane3.status?).to eq "flying"
-  	expect(plane4.status?).to eq "flying"
-  	expect(plane5.status?).to eq "flying"
-  	expect(plane6.status?).to eq "flying"
+  	expect(six_planes.all?{|plane| plane.status? == "flying"}).to be true
   	end
 	
 end

@@ -21,7 +21,8 @@ DEFAULT_CAPACITY = 20
 	def dock(plane)
 			raise "cannot dock, bad weather" if weather == "storm"
 			raise "cannot dock, airport full" 	if @in_airport.count == capacity
-		@in_airport << plane 
+			@in_airport << plane 
+			
 	end
 
 	def filled_spaces
@@ -30,6 +31,7 @@ DEFAULT_CAPACITY = 20
 
 	def release(plane)
 			raise "cannot release, bad weather" if weather == "storm"
+			raise "no plane to release"	if filled_spaces == 0
 		@in_airport.pop
 		self
 	end
