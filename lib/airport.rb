@@ -29,6 +29,7 @@ DEFAULT_CAPACITY = 20
 	end
 
 	def release(plane)
+			raise "cannot release, bad weather" if weather == "storm"
 		@in_airport.pop
 		self
 	end

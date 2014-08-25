@@ -30,6 +30,11 @@ let(:plane) 		{ double = 'plane'				}
 
 		it 'a plane cannot take off when a storm is brewing' do
 			allow(airport).to receive(:weather).and_return("storm")
+			expect{ airport.release(plane)}.to raise_error("cannot release, bad weather") 
+		end
+
+		it 'a plane cannot land in the middle of a storm' do
+			allow(airport).to receive(:weather).and_return("storm")
 			expect{ airport.dock(plane) }.to raise_error("cannot dock, bad weather") 
 		end
 
