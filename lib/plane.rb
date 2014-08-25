@@ -1,17 +1,17 @@
 class Plane
 	def initialize
-		@grounded = false
+		@status = "flying"
 	end
 
-	def grounded?
-		@grounded
+	def status?
+		@status
 	end
 
 	def take_off
-		@grounded = false
+		@status = "flying"
 	end
 
 	def land
-		@grounded = true
+		@status= "landed"
 	end
 end
