@@ -1,10 +1,7 @@
 module Weather 
 
-POSSIBLE_WEATHERS = %w(sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny stormy)
-
 	def weather
-		POSSIBLE_WEATHERS.sample
+		rand(11) == 1? "stormy" : "sunny"
 	end
-
 
 end

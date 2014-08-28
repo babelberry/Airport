@@ -20,6 +20,7 @@ let (:plane6)	{ Plane.new}
   	until airport.filled_spaces == airport.capacity do 
   			six_planes.each {|plane| airport.dock(plane)} 
   			end
+    expect(six_planes.all?{|plane| plane.status? == "landed"}).to be true
   	six_planes.each {|plane| airport.release(plane)}
   	expect(six_planes.all?{|plane| plane.status? == "flying"}).to be true
   	end

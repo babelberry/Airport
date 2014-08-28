@@ -1,8 +1,6 @@
 require 'check_weather'
 
-class CheckWeather;
-	include Weather;
-end
+class CheckWeather;include Weather;end
 
 describe CheckWeather do
 
