@@ -12,5 +12,10 @@ I built it by myself, using:
 - Ruby
 - Rspec
 
+## What I learned
+
+- To break down and solve a coding problem by myself
+- The importance of TDD
+
 ## The brief
-![Brief](http://ENTER_URL)
+![Brief](https://github.com/binaryberry/Airport/blob/master/image.jpg)
